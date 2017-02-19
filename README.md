@@ -45,4 +45,6 @@ complete, or too much time and the program wait unnecessarily.
 1. Also beware that you may have numeric overflow when adding many ints. Of course, that must be avoided to be sure the average is correct
 
 
+[![Build Status](https://travis-ci.org/MCO364-1/hw3-profyoni.svg?branch=master)](https://travis-ci.org/MCO364-1/hw3-profyoni)
+
 
