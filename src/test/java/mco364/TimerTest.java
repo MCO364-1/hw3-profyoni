@@ -45,6 +45,7 @@ public class TimerTest {
         sw.startTimer();
         sw.stopTimer();       
         sw.stopTimer();
+        fail();
     }
 
 }
