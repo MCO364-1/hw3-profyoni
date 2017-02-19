@@ -28,7 +28,9 @@ class StopWatch {
         if (msStartTime == 0) {
             throw new TimerException("Must call 'startTimer' before each call to 'stopTimer'");
         }
-        return System.currentTimeMillis() - msStartTime;
+        long lastStartTime = msStartTime;
+        msStartTime = 0; // don't allow stop unless start was called beforehand without a stop
+        return System.currentTimeMillis() - lastStartTime;
     }
     
 }

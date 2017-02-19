@@ -5,6 +5,8 @@
  */
 package mco364;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
@@ -13,10 +15,36 @@ import static org.junit.Assert.*;
  * @author yrobi
  */
 public class TimerTest {
-//
-//    @Test
-//    public void testMyStuff() {
-//
-//    }
+
+    @Test
+    public void stop() {
+        StopWatch sw = new StopWatch();
+        sw.startTimer();
+
+        try {
+            Thread.sleep(100);
+        } catch (InterruptedException ex) {
+            Logger.getLogger(TimerTest.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+        long actual = sw.stopTimer();
+
+        assertTrue(actual >= 100);
+        assertTrue(actual <= 500);
+    }
+
+    @Test(expected = TimerException.class)
+    public void stopWithoutStart() {
+        StopWatch sw = new StopWatch();
+        sw.stopTimer();
+    }
+
+    @Test(expected = TimerException.class)
+    public void stopWithoutStartBeforeThisStop() {
+        StopWatch sw = new StopWatch();
+        sw.startTimer();
+        sw.stopTimer();       
+        sw.stopTimer();
+    }
 
 }

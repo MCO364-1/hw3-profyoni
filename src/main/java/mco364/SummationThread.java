@@ -15,7 +15,7 @@ class SummationThread extends Thread {
         this.min = min;
         this.max = max;
         
-        if (AppSettings.DEBUG)
+        if (AppSettings.DEBUG) 
         {
             System.out.println(min + "," + max);
         }
