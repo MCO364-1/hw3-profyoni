@@ -41,11 +41,11 @@ public class TimerTest {
 
     @Test(expected = TimerException.class)
     public void stopWithoutStartBeforeThisStop() {
+        fail();
         StopWatch sw = new StopWatch();
         sw.startTimer();
         sw.stopTimer();       
         sw.stopTimer();
-        fail();
     }
 
 }
