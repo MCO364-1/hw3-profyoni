@@ -22,7 +22,8 @@ repositories {
 }
 
 dependencies {
-    // TODO: Add dependencies here ...
+    testCompile 'junit:junit:4.11'
+    testCompile 'org.mockito:mockito-core:1.9.+'
     // You can read more about how to add dependency here:
     //   http://www.gradle.org/docs/current/userguide/dependency_management.html#sec:how_to_declare_your_dependencies
     testCompile group: 'junit', name: 'junit', version: '4.10'
