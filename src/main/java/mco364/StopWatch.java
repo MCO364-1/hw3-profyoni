@@ -4,8 +4,7 @@ package mco364;
  *
  * @author yrobi
  */
-class StopWatch {
-    
+class StopWatch {    
     private long msStartTime;
 
     public void startTimer() {

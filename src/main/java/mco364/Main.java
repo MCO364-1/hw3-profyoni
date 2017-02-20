@@ -11,8 +11,8 @@ public class Main {
         //Multithreading.initWithRandom(list, 1, 100);
         Multithreading.initWithValue(list, 1);
         StopWatch stopWatch = new StopWatch();
-        long lastSpeed = Long.MAX_VALUE;
-        for (int degreeOfMultiThreading = 1; degreeOfMultiThreading < 100000; degreeOfMultiThreading *= 2)
+        long lastSpeed = Long.MAX_VALUE; // kludge
+        for (int degreeOfMultiThreading = 1; degreeOfMultiThreading < 100_000; degreeOfMultiThreading *= 2)
         {
             stopWatch.startTimer();
             double average = Multithreading.averageMT(list, degreeOfMultiThreading );
